@@ -1,0 +1,59 @@
+public class Main {
+
+    public static void main(String[] args) {
+        byte byte1 = 0;
+        int int1 = 0;
+        short short1 = 0;
+        long long1 = 0;
+        float float1 = 0.0F;
+        double double1 = 0.0;
+        String str1 = "Hello!";
+
+        System.out.println(calcSome(2,2,8,4));
+        System.out.println(is10To20(5,20));
+        isPositive(0);
+        System.out.println(isNegative(0));
+        greetsWithName("Никодим");
+        isVis(404);
+    }
+
+    static int calcSome (int a, int b, int c, int d){
+        return a * (b + (c / d));
+    }
+
+    static boolean is10To20 (int num1, int num2){
+        int sum = num1 + num2;
+        return  (sum >= 10 && sum <= 20);
+    }
+
+    static void isPositive (int num) {
+        if (num < 0) {
+            System.out.println(num + " является отрицательным числом");
+        } else {
+            System.out.println(num + " является положительным числом");
+        }
+    }
+
+    static boolean isNegative (int num){
+        return num < 0;
+    }
+
+    static void greetsWithName (String name) {
+        System.out.println("Привет, " + name + "!");
+    }
+
+    static void isVis (int year){
+        if (year%4 == 0) {
+            if (year%400 == 0) {
+                System.out.println("Год " + year + " високосный!");
+            } else if (year%100 == 0) {
+                System.out.println("Год " + year + " не високосный!");
+            } else {
+                System.out.println("Год " + year + " високосный!");
+            }
+        } else {
+            System.out.println("Год " + year + " не високосный!");
+        }
+    }
+
+}
